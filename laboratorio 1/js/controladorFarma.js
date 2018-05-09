@@ -15,7 +15,7 @@ function mostrarTablaInventario() {
         mListaInventario = obtenerListaInventarioFiltrada(sFiltro);
     }
 
-    let tbody = document.querySelector('#tblInventario tbody');
+    let tbody = document.querySelector('#tblInventarioC tbody');
     let nTamanno = mListaInventario.length; //cantidad de filas
 
     tbody.innerHTML = '';
