@@ -94,6 +94,13 @@ main button {
     margin-top: 10px;
 }
 
+    main button {
+        color: #000;
+        background: #fff;
+        padding: 5px 5%;
+        margin-top: 10px;
+    }
+
 main table thead {
     padding: 5px 2%;
     color: #a09c9c;
@@ -105,9 +112,34 @@ main table tbody {
     text-align: center;
 }
 
-main table tbody a {
-    padding-right: 10%;
-    color: #666363;
-}
+    main #tblCasaF tbody a{
+        margin-right: 5%;
+    }
+    main #tblCasaF tbody .fa-trash {
+       background: #666363;
+       padding: 10px 10px;
+       color: #fff;
+    }
 
+        main #tblCasaF tbody .fa-trash:hover {
+            background: #ffffff;
+            padding: 10px 10px;
+            color: #535353;
+        }
+
+    main #tblCasaF tbody .fa-edit {
+        background: #666363;
+        padding: 10px 10px;
+        color: #fff;
+    }
+
+        main #tblCasaF tbody .fa-edit:hover {
+            background: #ffffff;
+            padding: 10px 10px;
+            color: #535353;
+        }
+
+.ocultar{
+    display: none;
+}
 /* Finalizan los estilos para las Casas Farmaceuticas */

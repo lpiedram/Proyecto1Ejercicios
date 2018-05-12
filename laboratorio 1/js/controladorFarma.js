@@ -108,7 +108,7 @@ function mostrarTablaProductos() {
         let colOpciones = fila.insertCell();
 
         let btnEditar = document.createElement('a'); // se crea el botón de editar
-        btnEditar.classList.add('fas'); // se le asigna la clase fa
+        btnEditar.classList.add('fas'); // se le asigna la clase fas
         btnEditar.classList.add('fa-edit'); // se le asigna la clase específica del ícono
         btnEditar.dataset.cod = mListaProductos[i][0];
 
@@ -119,8 +119,9 @@ function mostrarTablaProductos() {
         let btnBorrar = document.createElement('a'); // se crea el boton de eliminar
         btnBorrar.classList.add('fas'); // se le asigna la clase fa
         btnBorrar.classList.add('fa-trash'); // se le asigna la clase especifica del icono
+        btnBorrar.dataset.cod = mListaProductos[i][0];
         
-        // btnBorrar.addEventListener('click', eliminarProducto);
+        btnBorrar.addEventListener('click', eliminarProducto);
         colOpciones.appendChild(btnBorrar);
 
         let colCod = fila.insertCell();
@@ -182,6 +183,25 @@ function editarProducto() {
     inputCosto.value = aMedicamentoSeleccionado[3];
     slctCasa.value = aMedicamentoSeleccionado[4];
 
+}
+
+function eliminarProducto() {
+    let scod = this.dataset.cod;
+    
+    if (!scod) {
+        swal(
+            '¡Codigo no existe!',
+            'El medicamento que has seleccionado no existe',
+            'warning'
+        );
+    } else {
+        scod.remove;
+        swal(
+            '¡Felicidades!',
+            'Medicamento eliminado con éxito',
+            'success'
+        );
+    }
 }
 
 function validarFormulario() {
